@@ -127,6 +127,27 @@ public class LinkedList<T> {
         head = null;
     }
 
+    /**
+     * метод разворота связного списка (практическое задание)
+     */
+    public void revert(){
+        if (head != null && head.next != null){
+            Node temp = head;
+            revert(head.next, head);
+            temp.next = null; 
+        }
+    }
+    
+    private void revert (Node currNode, Node prevNode){
+        if (currNode.next == null){
+            head = currNode;
+        }
+        else{
+            revert(currNode.next, currNode);
+        }
+        currNode.next = prevNode;
+    }
+
     @Override
     public String toString() {
 

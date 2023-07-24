@@ -1,7 +1,7 @@
 public class Program {
 
     public static void main(String[] args) {
-
+    /* 
         Object[] array = new Object[10];
         array[0] = 1;
         array[1] = "Hello!";
@@ -41,14 +41,27 @@ public class Program {
             System.out.println("Элемент не найден.");
         }
 
-
         linkedList1.removeFirst();
 
         linkedList1.removeLast();
 
         System.out.println();
         System.out.println(linkedList1);
+    */
+        // вызываем метод разворота связного списка
 
+        LinkedList<Employee> linkedList2 = new LinkedList<>();
+        linkedList2.addFirst(new Employee("Семен Петрович", 43));
+        linkedList2.addFirst(new Employee("Тамара Степановна", 22));
+        linkedList2.addFirst(new Employee("Елена Дмитриевна", 55));
+        linkedList2.addFirst(new Employee("Дмитрий Александрович", 67));
+        linkedList2.addFirst(new Employee("Наталья Владимировна", 32));
+        linkedList2.addFirst(new Employee("Виктория Юрьевна", 21));
+        System.out.printf("Изначальный список сотрудников: \n" + linkedList2);
+        
+        linkedList2.revert();
+        System.out.println();
+        System.out.printf("Cписок сотрудников после метода разворота: \n" + linkedList2);
     }
 
 }
